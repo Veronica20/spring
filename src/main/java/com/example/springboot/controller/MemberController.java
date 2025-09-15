@@ -1,0 +1,37 @@
+package com.example.springboot.controller;
+
+import com.example.springboot.dto.SignupRequest;
+import com.example.springboot.model.Member;
+import com.example.springboot.service.MemberService;
+import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/users")
+public class MemberController {
+
+    private final MemberService memberService;
+
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
+    @PostMapping
+    public Member createUser(@Valid @RequestBody SignupRequest request) {
+        return memberService.registerMember(request);
+    }
+
+    @GetMapping
+    public List<Member> getAllUsers() {
+        return memberService.getAllMembers();
+    }
+
+    @GetMapping("/{email}")
+    public Optional<Member> getMByEmail(@PathVariable String email) {
+        return memberService.getMemberByEmail(email);
+    }
+}
+
