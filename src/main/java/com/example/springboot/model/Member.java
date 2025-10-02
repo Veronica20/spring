@@ -8,17 +8,23 @@ import lombok.*;
 //        @UniqueConstraint(columnNames = "email")
 //}) s another way (useful if you want multiple columns unique together
 @Entity
-@Data               // generates getters, setters, toString, equals, hashCode
-@NoArgsConstructor  // generates the default constructor
-@AllArgsConstructor // generates a constructor with all fields
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
+@ToString(exclude = {"password"})
+@EqualsAndHashCode(exclude = {"password"})
 public class Member {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+
     private String firstName;
     private String lastName;
+
+    @Column(unique = true, nullable = false)
     private String email;
+
     private String password;
 }

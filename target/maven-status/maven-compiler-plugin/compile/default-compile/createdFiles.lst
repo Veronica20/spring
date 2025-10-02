@@ -1,4 +1,7 @@
+com/example/springboot/controller/AuthController.class
 com/example/springboot/model/Member$MemberBuilder.class
+com/example/springboot/model/CustomUserDetails.class
+com/example/springboot/service/JwtService.class
 com/example/springboot/exception/GlobalExceptionHandler.class
 com/example/springboot/repository/MemberRepository.class
 com/example/springboot/exception/EmailAlreadyExistsException.class
@@ -7,6 +10,8 @@ com/example/springboot/config/SecurityConfig.class
 com/example/springboot/exception/ErrorResponse.class
 com/example/springboot/model/Member.class
 com/example/springboot/Application.class
+com/example/springboot/dto/LoginRequest.class
 com/example/springboot/service/MemberService.class
+com/example/springboot/service/CustomUserDetailsService.class
 com/example/springboot/dto/SignupRequest.class
 com/example/springboot/controller/HelloController.class

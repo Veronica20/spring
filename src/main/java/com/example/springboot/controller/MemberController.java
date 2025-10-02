@@ -19,10 +19,7 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @PostMapping
-    public Member createUser(@Valid @RequestBody SignupRequest request) {
-        return memberService.registerMember(request);
-    }
+
 
     @GetMapping
     public List<Member> getAllUsers() {
