@@ -1,4 +1,5 @@
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/Application.java
+/Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/config/JwtAuthenticationFilter.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/config/SecurityConfig.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/controller/AuthController.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/controller/HelloController.java
