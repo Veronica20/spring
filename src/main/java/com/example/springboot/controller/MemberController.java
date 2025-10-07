@@ -1,5 +1,6 @@
 package com.example.springboot.controller;
 
+import com.example.springboot.dto.MemberResponseDto;
 import com.example.springboot.dto.SignupRequest;
 import com.example.springboot.model.Member;
 import com.example.springboot.service.MemberService;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/users")
@@ -22,7 +24,7 @@ public class MemberController {
 
 
     @GetMapping
-    public List<Member> getAllUsers() {
+    public List<MemberResponseDto> getAllUsers() {
         return memberService.getAllMembers();
     }
 

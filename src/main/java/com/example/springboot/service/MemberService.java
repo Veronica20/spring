@@ -1,7 +1,9 @@
 package com.example.springboot.service;
 
+import com.example.springboot.dto.MemberResponseDto;
 import com.example.springboot.dto.SignupRequest;
 import com.example.springboot.exception.EmailAlreadyExistsException;
+import com.example.springboot.mapper.MemberMapper;
 import com.example.springboot.model.Member;
 import com.example.springboot.repository.MemberRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -9,24 +11,31 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
+    private final MemberMapper memberMapper;
 
-    public MemberService(MemberRepository memberRepository, PasswordEncoder passwordEncoder) {
+    public MemberService(MemberRepository memberRepository, PasswordEncoder passwordEncoder, MemberMapper memberMapper) {
         this.memberRepository = memberRepository;
         this.passwordEncoder = passwordEncoder;
+        this.memberMapper = memberMapper;
     }
+
 
     public Member saveMember(Member member) {
         return memberRepository.save(member);
     }
 
-    public List<Member> getAllMembers() {
-        return memberRepository.findAll();
+    public List<MemberResponseDto> getAllMembers() {
+        return memberRepository.findAll()
+                .stream()
+                .map(memberMapper::toDto)
+                .collect(Collectors.toList());
     }
 
     public Optional<Member> getMemberByEmail(String email) {

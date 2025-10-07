@@ -3,11 +3,14 @@ com/example/springboot/model/Member$MemberBuilder.class
 com/example/springboot/model/CustomUserDetails.class
 com/example/springboot/service/JwtService.class
 com/example/springboot/exception/GlobalExceptionHandler.class
+com/example/springboot/dto/MemberRequestDto.class
 com/example/springboot/repository/MemberRepository.class
 com/example/springboot/exception/EmailAlreadyExistsException.class
 com/example/springboot/controller/MemberController.class
+com/example/springboot/mapper/MemberMapper.class
 com/example/springboot/config/SecurityConfig.class
 com/example/springboot/exception/ErrorResponse.class
+com/example/springboot/dto/MemberResponseDto.class
 com/example/springboot/model/Member.class
 com/example/springboot/Application.class
 com/example/springboot/config/JwtAuthenticationFilter.class

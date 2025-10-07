@@ -5,10 +5,13 @@
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/controller/HelloController.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/controller/MemberController.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/dto/LoginRequest.java
+/Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/dto/MemberRequestDto.java
+/Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/dto/MemberResponseDto.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/dto/SignupRequest.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/exception/EmailAlreadyExistsException.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/exception/ErrorResponse.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/exception/GlobalExceptionHandler.java
+/Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/mapper/MemberMapper.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/model/CustomUserDetails.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/model/Member.java
 /Users/veronicavoskanyan/Sites/gs-spring-boot/initial/src/main/java/com/example/springboot/repository/MemberRepository.java
